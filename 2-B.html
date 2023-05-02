@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Philosophical Scenarios</title>
+    <script>
+      function redirectToPage() {
+        var selectedOption = document.querySelector('input[name="answer"]:checked').value;
+        if (selectedOption === 'option1') {
+          window.location.href = '2-B-I.html';
+        } else if (selectedOption === 'option2') {
+          window.location.href = '2-B-II.html';
+        } else {
+          alert('Please select an option.');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Option B Selected.</h1>
+    <p>You killed the President to end Jim Crow segregation.</p>
+    <h1>Scenario 3: Retribution</h1>
+    <p>You are a doctor and a terminally ill patient has come to you requesting assisted suicide. You are faced with a decision:</p>
+    <form>
+      <label>
+        <input type="radio" name="answer" value="option1">
+        Option I: You agree to assist the patient in ending their life, as they have a right to die with dignity and autonomy.
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="answer" value="option2">
+        Option II: You refuse to assist the patient in ending their life, as it goes against the Hippocratic Oath to "do no harm" and the sanctity of life.
+      </label>
+      <br>
+      <input type="button" value="Submit" onclick="redirectToPage()">
+    </form>
+  </body>
+</html>

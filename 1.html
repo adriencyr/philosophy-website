@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Philosophical Scenarios</title>
+    <script>
+      function redirectToPage() {
+        var selectedOption = document.querySelector('input[name="answer"]:checked').value;
+        if (selectedOption === 'option1') {
+          window.location.href = '1-A.html';
+        } else if (selectedOption === 'option2') {
+          window.location.href = '1-B.html';
+        } else {
+          alert('Please select an option.');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Option 1 Selected.</h1>
+    <p>You ended up aborting the twins to save the mother's life.</p>
+    <h1>Scenario 2: The Lives of the Many</h1>
+    <p>Jim Crow laws have plagued America for years. You have the choice of stopping Jim Crow. You can let history play out, and eventually, Jim Crow will end just like it did in real life. Every action and event will take place as recorded, including deaths. The other option is if you choose to kill the President, which will end Jim Crow and alter history. Nobody who was fated to die in Jim Crow history would die anymore. What should you do?</p>
+    <form>
+      <label>
+        <input type="radio" name="answer" value="option1">
+        Option A: Save the President, and let history play out
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="answer" value="option2">
+        Option B: Kill the President to end Jim Crow 
+      </label>
+      <br>
+      <input type="button" value="Submit" onclick="redirectToPage()">
+    </form>
+  </body>
+</html>
