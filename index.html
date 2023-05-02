@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Philosophical Scenarios</title>
+    <script>
+      function redirectToPage() {
+        var selectedOption = document.querySelector('input[name="answer"]:checked').value;
+        if (selectedOption === 'option1') {
+          window.location.href = '1.html';
+        } else if (selectedOption === 'option2') {
+          window.location.href = '2.html';
+        } else {
+          alert('Please select an option.');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Scenario 1: Who's Life?</h1>
+    <p>A mother is expecting twins. She can either give birth to the twins or abort them. If she chooses not to abort them, she will die in childbirth. Aborting them will save her life. What should she do?</p>
+    <form>
+      <label>
+        <input type="radio" name="answer" value="option1">
+        Option 1: Abort the twins, but save the mother's life (2 for 1)
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="answer" value="option2">
+        Option 2: Save the twins at the cost of the mother's life (1 for 2)
+      </label>
+      <br>
+      <input type="button" value="Submit" onclick="redirectToPage()">
+    </form>
+  </body>
+</html>
